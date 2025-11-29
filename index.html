@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本化粧品検定2級 対策アプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>日本化粧品検定2級 対策模試</h1>
+        <p class="subtitle">肌悩み・メイクアップ・生活習慣</p>
+    </header>
+
+    <div id="start-screen" class="screen active">
+        <div class="intro-box">
+            <p><strong>試験時間:</strong> 50分</p>
+            <p><strong>出題範囲:</strong> 2級準拠（皮膚構造、肌トラブル、UVケア、メイク、生活習慣）</p>
+        </div>
+        <button class="btn-primary" onclick="startQuiz()">試験スタート</button>
+    </div>
+
+    <div id="quiz-screen" class="screen">
+        <div class="status-bar">
+            <span id="progress">第 1 問</span>
+            <span id="timer" class="timer">50:00</span>
+        </div>
+
+        <div id="question-container">
+            </div>
+
+        <div id="feedback" class="feedback-box">
+            <h3 id="feedback-title"></h3>
+            <p id="feedback-text"></p>
+        </div>
+
+        <button id="next-btn" class="btn-primary btn-next" onclick="nextQuestion()">次の問題へ</button>
+    </div>
+
+    <div id="result-screen" class="screen">
+        <h2>試験終了</h2>
+        <div class="score-area">
+            <p>あなたの正解率</p>
+            <div class="score-number"><span id="score">0</span> / <span id="total-q">0</span></div>
+            <p id="comment" class="comment"></p>
+        </div>
+        <button class="btn-primary" onclick="location.reload()">ホームに戻る</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
